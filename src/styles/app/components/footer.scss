@@ -1,0 +1,79 @@
+.footer {
+  @include display-flexbox(auto);
+  @include justify-content(space-between);
+  @include align-items(flex-start);
+
+  .content {
+    padding: 0 6rem;
+    flex: 1;
+  }
+
+  .book-now {
+    @include display-flexbox(auto);
+    @include align-items(center);
+    
+    .icon,
+    h4 {
+      @include prefix(transition, all .4s ease, webkit o moz spec);
+      opacity: 0.8;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    .icon {
+      border: 2px solid #eeeeec;
+      border-radius: 50%;
+      height: 1.5rem;
+      width: 1.5rem;
+      margin-right: 8rem;
+
+      .feather {
+        width: 1.5rem;
+        height: 1.5rem;
+        color: #eeeeec;
+      }
+    }
+
+    h4 {
+      color: #eeeeec;
+      font-weight: 700;
+      font-size: 1.5rem;
+      letter-spacing: 0.5rem;
+      text-transform: uppercase;
+    }
+
+  }
+
+  .best-place {
+    @include display-flexbox(auto);
+    @include align-items(center);
+
+    .number {
+      font-weight: 400;
+      font-size: 1.5rem;
+      letter-spacing: 0.25rem;
+      color: #ffffff;
+      opacity: 0.4;
+    }
+
+    .divider {
+      width: 10rem;
+      height: 0.125rem;
+      margin: 0 2rem;
+      background: #ffffff;
+      opacity: 0.3;
+    }
+
+    .text {
+      font-weight: 400;
+      font-size: 1rem;
+      letter-spacing: 0.1rem;
+      color: #ffffff;
+      opacity: 0.4;
+      text-transform: uppercase;
+    }
+  }
+}

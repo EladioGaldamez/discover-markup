@@ -1,0 +1,40 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.body-background {
+  @include display-flexbox(auto);
+  @include flex-direction(column);
+  @include justify-content(space-between);
+  position: relative;
+  background-image: url('/images/photo-1513553404607-988bf2703777.jpeg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: inset 0 0 0 100vw rgba(0, 0, 0, 0.3);
+
+  &::after {
+    content: "DISCOVER";
+    position: absolute;
+    right: 4rem;
+    bottom: 8rem;
+    opacity: 0.3;
+    font-weight: 900;
+    font-size: 8rem;
+    letter-spacing: 2rem;
+    color: #f1f1f1;
+  }
+}
+
+a {
+  text-decoration: none;
+  @include prefix(transition, all .2s ease, webkit moz o spec);
+}
